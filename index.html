@@ -1,303 +1,52 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ドライヘッドスパ専門店 ねむりどき 大須店｜大須のリラクゼーション（デモ）</title>
-<meta name="description" content="大須のドライヘッドスパ専門店。水もオイルも使わない頭ほぐしで、眼精疲労・肩こり・眠りの悩みに。空席確認から予約までこのページで完結します。※販売デモ用の架空店舗サイトです">
-<style>
-:root{
-  --ivory:#F7F4EC; --paper:#FFFDF7; --ink:#23312B; --green:#2E5E4E; --green-d:#1E4234;
-  --line:#DDD5C2; --mut:#6B7268; --accent:#2E5E4E;
-  --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho",serif;
-  --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--ivory);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.8;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:430px;margin:0 auto;background:var(--ivory);padding-bottom:76px}
-.demo-bar{background:var(--ink);color:#EDE8D8;font-size:11px;text-align:center;padding:7px 14px;letter-spacing:.02em}
-header.site{padding:16px 20px 10px;display:flex;justify-content:space-between;align-items:baseline}
-.logo{font-family:var(--serif);font-size:19px;letter-spacing:.06em}
-.logo small{display:block;font-family:var(--sans);font-size:10px;color:var(--mut);letter-spacing:.18em}
-.head-tel{font-size:12px;color:var(--green);border:1px solid var(--green);border-radius:999px;padding:3px 12px}
-.fv{position:relative}
-.fv img{width:100%;height:340px;object-fit:cover}
-.fv-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,32,27,.12),rgba(20,32,27,.55))}
-.fv-copy{position:absolute;left:20px;right:20px;bottom:18px;color:#FFFDF7}
-.fv-kicker{font-size:11px;letter-spacing:.22em;margin-bottom:6px}
-.fv h1{font-family:var(--serif);font-weight:600;font-size:29px;line-height:1.45;letter-spacing:.04em}
-.fv-sub{font-size:12.5px;margin-top:8px;opacity:.95}
-.fv-cta{display:flex;gap:10px;margin-top:14px}
-.btn{flex:1;text-align:center;border-radius:10px;padding:12px 6px;font-size:14px;font-weight:700}
-.btn-main{background:var(--green);color:#FFFDF7}
-.btn-sub{background:rgba(255,253,247,.94);color:var(--ink)}
-.evidence{display:flex;gap:8px;padding:14px 20px 2px}
-.ev{flex:1;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:9px 10px;text-align:center}
-.ev b{display:block;font-size:16px;font-family:var(--serif)}
-.ev span{font-size:10.5px;color:var(--mut)}
-section{padding:34px 20px 0}
-.sec-head{margin-bottom:14px}
-.sec-en{font-size:10px;letter-spacing:.26em;color:var(--green);font-weight:700}
-.sec-head h2{font-family:var(--serif);font-size:21px;font-weight:600;letter-spacing:.03em;margin-top:2px}
-.sec-head p{font-size:12.5px;color:var(--mut);margin-top:4px}
-.date-tabs{display:flex;gap:8px;margin-bottom:12px}
-.date-tab{flex:1;border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:8px 4px;text-align:center;font-size:12.5px;cursor:pointer}
-.date-tab.on{border-color:var(--green);background:#EDF3EE;font-weight:700}
-.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.slot{border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:8px 2px;text-align:center;cursor:pointer;font-size:13px}
-.slot .mark{display:block;font-size:15px;line-height:1.3}
-.slot.ok .mark{color:var(--green);font-weight:700}
-.slot.few .mark{color:#B07D2B;font-weight:700}
-.slot.full{opacity:.45;cursor:default}
-.slot.full .mark{color:var(--mut)}
-.slot.sel{border-color:var(--green);background:var(--green);color:#FFFDF7}
-.slot.sel .mark{color:#FFFDF7}
-.legend{font-size:11px;color:var(--mut);margin-top:10px}
-.worries{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.worry{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 12px;cursor:pointer;text-align:left;font-family:var(--sans)}
-.worry b{display:block;font-size:14.5px;margin-bottom:3px}
-.worry span{font-size:11.5px;color:var(--mut);line-height:1.6;display:block}
-.worry.on{border-color:var(--green);background:#EDF3EE}
-table.price{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-table.price th,table.price td{padding:11px 12px;border-bottom:1px solid var(--line);font-size:13px;text-align:left;vertical-align:top}
-table.price tr:last-child td{border-bottom:none}
-table.price .p{text-align:right;font-weight:700;white-space:nowrap;font-size:14px}
-table.price .tag{display:inline-block;font-size:10px;background:var(--green);color:#fff;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:2px}
-.price-note{font-size:11px;color:var(--mut);margin-top:8px}
-.staff{display:flex;flex-direction:column;gap:10px}
-.person{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;gap:12px}
-.avatar{width:52px;height:52px;border-radius:50%;background:var(--green);color:#FFFDF7;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:20px;flex:none}
-.person b{font-size:15px}
-.person .meta{font-size:11.5px;color:var(--green);font-weight:700}
-.person p{font-size:12.5px;color:#3C463F;margin-top:2px;line-height:1.65}
-.flow{display:flex;flex-direction:column;gap:0}
-.step{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
-.step:last-child{border-bottom:none}
-.step .no{font-family:var(--serif);font-size:19px;color:var(--green);width:30px;flex:none}
-.step b{font-size:14px}
-.step p{font-size:12.5px;color:var(--mut)}
-.promise{background:var(--green-d);color:#F2EFE3;border-radius:12px;padding:18px 16px}
-.promise h3{font-family:var(--serif);font-size:16px;margin-bottom:8px}
-.promise li{font-size:12.5px;margin-left:18px;margin-bottom:4px}
-.photo-band{margin-top:34px}
-.photo-band img{width:100%;height:210px;object-fit:cover}
-.faq details{background:var(--paper);border:1px solid var(--line);border-radius:10px;margin-bottom:8px;padding:12px 14px}
-.faq summary{font-size:13.5px;font-weight:700;cursor:pointer}
-.faq details p{font-size:12.5px;color:#3C463F;margin-top:6px}
-.shop-info{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px;font-size:13px}
-.shop-info dt{font-weight:700;margin-top:8px}
-.shop-info dt:first-child{margin-top:0}
-.shop-info dd{color:#3C463F}
-form.book{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px}
-form.book label{display:block;font-size:12px;font-weight:700;margin:12px 0 4px}
-form.book label:first-child{margin-top:0}
-form.book input,form.book select{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px;font-size:14px;background:#fff;font-family:var(--sans)}
-form.book button{width:100%;margin-top:16px;background:var(--green);color:#FFFDF7;border:none;border-radius:10px;padding:13px;font-size:15px;font-weight:700;cursor:pointer}
-.book-done{display:none;background:#EDF3EE;border:1px solid var(--green);border-radius:12px;padding:16px;font-size:13px}
-footer{padding:34px 20px 10px;font-size:11px;color:var(--mut);text-align:center}
-.bottom-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:100%;max-width:430px;display:flex;z-index:20;box-shadow:0 -4px 16px rgba(30,40,35,.14)}
-.bottom-bar a{flex:1;text-align:center;padding:14px 6px;font-weight:700;font-size:14px}
-.bottom-bar .b1{background:var(--paper);color:var(--green);border-top:1px solid var(--line)}
-.bottom-bar .b2{background:var(--green);color:#FFFDF7}
-</style>
-</head>
-<body>
-<div class="wrap">
-<div class="demo-bar">これは販売デモ用の架空店舗サイトです。店舗・スタッフ・価格・空席はすべてサンプル表示です</div>
-<header class="site">
-  <div class="logo">ねむりどき<small>ドライヘッドスパ専門店 ／ 大須</small></div>
-  <a class="head-tel" href="#book">予約する</a>
-</header>
-
-<div class="fv">
-  <img src="img/treatment.jpg" alt="ドライヘッドスパの施術風景（サンプル画像）">
-  <div class="fv-veil"></div>
-  <div class="fv-copy">
-    <div class="fv-kicker">大須 ／ ドライヘッドスパ専門</div>
-    <h1>大須で、頭から<br>眠り直す。</h1>
-    <p class="fv-sub">水もオイルも使わない頭ほぐし専門店。着替えなし、そのままの服で受けられます。</p>
-    <div class="fv-cta">
-      <a class="btn btn-main" href="#slots">今日の空席を見る</a>
-      <a class="btn btn-sub" href="#price">コースと料金</a>
-    </div>
-  </div>
-</div>
-
-<div class="evidence">
-  <div class="ev"><b>50分 3,980円</b><span>入口コース（税込）</span></div>
-  <div class="ev"><b>10:00–23:00</b><span>大須観音駅 徒歩3分</span></div>
-  <div class="ev"><b>当日予約OK</b><span>ペア予約も可</span></div>
-</div>
-
-<section id="slots">
-  <div class="sec-head"><div class="sec-en">AVAILABILITY</div><h2>今日の空席</h2><p>空いている時間をタップすると、そのまま予約に進めます（空席はサンプル表示）。</p></div>
-  <div class="date-tabs" id="dateTabs"></div>
-  <div class="slots" id="slotGrid"></div>
-  <p class="legend">○ 空きあり ／ △ 残り1枠 ／ × 満席　※表示はデモ用のサンプルです</p>
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大須のメンズエステ【ねむりどき 大須店】完全個室で極上の癒し体験（デモ）</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="demo">サンプル／デモサイトです（架空の店舗・人物・料金はサンプル表示）</div><div id="splash"><div class="lg">ねむりどき<small>NEMURIDOKI OSU</small></div></div><header class="top"><div class="logo"><span class="g">ね</span>むりどき<small>NEMURIDOKI OSU</small></div></header>
+<nav class="main"><a href="index.html" class="on">トップ</a><a href="schedule.html" >出勤情報</a><a href="system.html" >料金システム</a><a href="therapist.html" >セラピスト</a><a href="index.html#access" >アクセス</a></nav>
+<div class="fv"><img src="img/hero.jpg"><div class="veil"></div><div class="lg"><div class="mark">ね</div><div class="nm">ねむりどき</div><div class="en">NEMURIDOKI OSU</div><div class="rule"></div></div></div>
+<section><h2 class="sec"><span class="en">News</span><span class="ja">お知らせ</span></h2>
+<div class="slider"><img src="img/interior.jpg"><img src="img/treatment.jpg"><img src="img/aroma.jpg"></div></section>
+<section><h2 class="sec"><span class="en">Topics</span><span class="ja">トピックス</span></h2>
+<div class="topic"><span class="tag">お知らせ</span><span class="d">2026/11/02 10:00</span><span>大須でドライヘッドスパをお探しなら【ねむりどき 大須店】へ。</span></div>
+<div class="topic"><span class="tag">お知らせ</span><span class="d">2026/10/15 12:00</span><span>★リニューアルOpen★ 個室を増席しました。</span></div></section>
+<section><h2 class="sec"><span class="en">Pick Up</span><span class="ja">おすすめセラピスト</span></h2>
+<div class="grid" id="pickup"></div></section>
+<section><h2 class="sec"><span class="en">Today's Schedule</span><span class="ja">本日の出勤</span></h2>
+<div class="tabs"><span class="on">全員</span><span>大須</span></div>
+<div class="grid" id="today"></div>
+<a class="more" href="schedule.html">出勤情報をすべて見る ›</a></section>
+<section><h2 class="sec"><span class="en">Therapist</span><span class="ja">セラピスト</span></h2>
+<div class="grid" id="therapists"></div>
+<a class="more" href="therapist.html">セラピスト一覧を見る ›</a></section>
+<section><h2 class="sec"><span class="en">Credit</span><span class="ja">クレジット</span></h2>
+<div class="credit"><b>クレジットカードをご利用の際はご予約時にお伝え下さい。</b><br>VISA、MASTER、JCB、AMEXがご利用になれます。（デモ表記）</div></section>
+<section><h2 class="sec"><span class="en">Concept</span><span class="ja">コンセプト</span></h2>
+<div class="concept">
+<p>大須でメンズエステをお探しなら【ねむりどき 大須店】へ。</p>
+<p>当店は大須観音駅近くに位置する、完全予約制・完全個室のメンズ専用リラクゼーションサロンです。</p>
+<p>在籍セラピストは全員、丁寧な接客と高い技術力を兼ね備えたプロフェッショナル。</p>
+<p>水もオイルも使わないドライヘッドスパで、日々のストレスやお疲れを癒します。</p>
+<p>「仕事の合間に」「お仕事終わりに」「週末のご褒美に」——</p>
+<p>30代・40代のビジネスマンを中心に、多くのお客様から高評価を頂いております。（デモ文面）</p>
+<p><span class="ck">✅</span>大須観音駅・上前津駅から徒歩圏内</p>
+<p><span class="ck">✅</span>完全個室＆予約制でプライベート空間を確保</p>
+<p><span class="ck">✅</span>今なら初回割引・体験コースあり</p>
+<p>大須でワンランク上のメンズエステをお求めの方は、ぜひ一度ご来店ください。</p>
+</div></section>
+<section id="access"><h2 class="sec"><span class="en">Access</span><span class="ja">アクセス</span></h2>
+<div class="room"><h3>大須ルーム（大須観音駅から）</h3>
+<p>名古屋市中区大須（番地はサンプル表記）</p>
+<p>鶴舞線大須観音駅2番出口から徒歩3分の場所です。駅に着きましたら、お電話くださいませ。ご案内いたします。大須観音駅は鶴舞線をご利用の方ならお気軽にお立ち寄りいただけます。また、名城線・鶴舞線の上前津駅からも徒歩圏内にございます。</p>
+<p class="tel">TEL：052-XXX-XXXX（サンプル）</p><p>Open 10:00 ～ 23:00</p></div>
+<div class="room"><h3>大須ルーム（上前津駅から）</h3>
+<p>名古屋市中区大須（番地はサンプル表記）</p>
+<p>名城線・鶴舞線 上前津駅出口から徒歩5分の場所です。駅に着きましたら、お電話くださいませ。ご案内いたします。</p>
+<p class="tel">TEL：052-XXX-XXXX（サンプル）</p><p>Open 10:00 ～ 23:00</p></div>
 </section>
-
-<section>
-  <div class="sec-head"><div class="sec-en">BY CONCERN</div><h2>悩みから選ぶ</h2><p>気になる悩みをタップすると、おすすめコースが選ばれます。</p></div>
-  <div class="worries">
-    <button class="worry" data-course="ドライヘッド 70分"><b>目の疲れ</b><span>パソコン・スマホで目が重い日に。側頭部からじっくりほぐします</span></button>
-    <button class="worry" data-course="ドライヘッド＋肩 90分"><b>首・肩のコリ</b><span>頭だけでなく首・肩まで範囲を広げたセットコース</span></button>
-    <button class="worry" data-course="快眠セット 90分（新規限定）"><b>眠りが浅い</b><span>ヘッド＋フットで全身をゆるめる、夜におすすめの組み合わせ</span></button>
-    <button class="worry" data-course="ドライヘッド 50分"><b>まずは試したい</b><span>初めての方の入口コース。50分で頭全体をほぐします</span></button>
-  </div>
-</section>
-
-<section id="price">
-  <div class="sec-head"><div class="sec-en">MENU ＆ PRICE</div><h2>コースと料金</h2><p>すべて税込。指名料はかかりません（サンプル価格）。</p></div>
-  <table class="price">
-    <tr><td>ドライヘッド 50分<span class="tag">入口</span><br><small style="color:var(--mut)">頭全体をほぐす基本コース</small></td><td class="p">3,980円</td></tr>
-    <tr><td>ドライヘッド 70分<br><small style="color:var(--mut)">側頭部・後頭部を長めに。目の疲れに</small></td><td class="p">5,480円</td></tr>
-    <tr><td>ドライヘッド＋肩 90分<br><small style="color:var(--mut)">首・肩・デコルテまで範囲を拡大</small></td><td class="p">7,900円</td></tr>
-    <tr><td>アロマヘッド 60分<br><small style="color:var(--mut)">香りを選べるオイルトリートメント</small></td><td class="p">8,980円</td></tr>
-    <tr><td>アロマヘッド 90分</td><td class="p">10,500円</td></tr>
-    <tr><td>快眠セット 90分<span class="tag">新規限定</span><br><small style="color:var(--mut)">ヘッド＋アロマ＋フットの組み合わせ</small></td><td class="p">7,900円</td></tr>
-  </table>
-  <p class="price-note">※回数券・再来クーポンはご来店時にご案内します（デモのため内容はサンプルです）。</p>
-</section>
-
-<div class="photo-band"><img src="img/interior.jpg" alt="店内の様子（サンプル画像）"></div>
-
-<section>
-  <div class="sec-head"><div class="sec-en">STAFF</div><h2>スタッフ</h2><p>施術歴と得意メニューで選べます（架空のスタッフです）。</p></div>
-  <div class="staff">
-    <div class="person"><div class="avatar">佐</div><div><b>佐伯</b> <span class="meta">施術歴8年 ／ 店長</span><p>得意：ドライヘッド全般、眼精疲労ケア。「強めが好きな方も、眠りたい方も、圧の調整は遠慮なくどうぞ」</p></div></div>
-    <div class="person"><div class="avatar">三</div><div><b>三浦</b> <span class="meta">施術歴5年</span><p>得意：アロマヘッド、香りの相談。「その日の気分で香りを一緒に選びます。初めての方の案内も担当しています」</p></div></div>
-    <div class="person"><div class="avatar">小</div><div><b>小野</b> <span class="meta">施術歴3年</span><p>得意：フット、快眠セット。「仕事帰りの短時間でも、頭が軽くなる実感を大事にしています」</p></div></div>
-  </div>
-</section>
-
-<section>
-  <div class="sec-head"><div class="sec-en">FIRST TIME</div><h2>初めての方へ</h2></div>
-  <div class="flow">
-    <div class="step"><div class="no">1</div><div><b>空席を選ぶ</b><p>上の空席表から日時をタップ。コースは後から変更できます。</p></div></div>
-    <div class="step"><div class="no">2</div><div><b>予約する</b><p>名前と電話番号だけで予約できます。会員登録は不要です。</p></div></div>
-    <div class="step"><div class="no">3</div><div><b>来店・カウンセリング</b><p>予約時間の5分前にお越しください。悩みと圧の好みを伺います。</p></div></div>
-    <div class="step"><div class="no">4</div><div><b>施術・お会計</b><p>着替えなしでそのまま施術。お会計は現金・カード・QR対応（サンプル）。</p></div></div>
-  </div>
-</section>
-
-<section>
-  <div class="promise"><h3>ねむりどきの約束</h3>
-    <ul>
-      <li>口コミは実投稿のみを載せます。このデモでは投稿受付前のため空枠です</li>
-      <li>効果を断定する表現は使いません。悩みに合うコースをご案内します</li>
-      <li>料金は税込で先に明示し、当日の追加請求はしません</li>
-      <li>強い勧誘や回数券の押し売りはしません</li>
-    </ul>
-  </div>
-</section>
-
-<div class="photo-band"><img src="img/aroma.jpg" alt="アロマオイルとタオル（サンプル画像）"></div>
-
-<section class="faq">
-  <div class="sec-head"><div class="sec-en">FAQ</div><h2>よくある質問</h2></div>
-  <details><summary>髪型が崩れませんか？</summary><p>水もオイルも使わないドライ施術なので、施術後に整髪料で軽く整える程度で出かけられます。アロマヘッドはオイルを使うため、帰宅後の洗髪をおすすめします。</p></details>
-  <details><summary>メイクをしたままで大丈夫ですか？</summary><p>はい。頭と首・肩まわりの施術なので、メイクはそのままで受けられます。</p></details>
-  <details><summary>ペアで予約できますか？</summary><p>できます。予約フォームの備考に「ペア希望」とお書きください（デモのため文面はサンプルです）。</p></details>
-  <details><summary>当日予約はできますか？</summary><p>空席があれば当日でも予約できます。空席表はこのページで確認できます。</p></details>
-  <details><summary>キャンセル料はかかりますか？</summary><p>前日までのキャンセルは無料です。当日はお電話でご相談ください（サンプル条件）。</p></details>
-</section>
-
-<section>
-  <div class="sec-head"><div class="sec-en">SHOP</div><h2>店舗情報</h2></div>
-  <dl class="shop-info">
-    <dt>住所</dt><dd>名古屋市中区大須3丁目（番地はデモのため省略したサンプル表示）</dd>
-    <dt>アクセス</dt><dd>大須観音駅（鶴舞線）徒歩3分 ／ 上前津駅（名城線・鶴舞線）徒歩6分</dd>
-    <dt>営業時間</dt><dd>10:00–23:00（最終受付 22:00）年中無休</dd>
-    <dt>設備</dt><dd>施術ベッド3台 ／ 半個室 ／ ペア利用可</dd>
-  </dl>
-</section>
-
-<section id="book">
-  <div class="sec-head"><div class="sec-en">RESERVATION</div><h2>予約する</h2><p>会員登録なしで予約できます（デモのため送信はされません）。</p></div>
-  <form class="book" id="bookForm">
-    <label>日時</label><input type="text" id="fSlot" readonly placeholder="上の空席表から選んでください">
-    <label>コース</label>
-    <select id="fCourse">
-      <option>ドライヘッド 50分</option><option>ドライヘッド 70分</option><option>ドライヘッド＋肩 90分</option>
-      <option>アロマヘッド 60分</option><option>アロマヘッド 90分</option><option>快眠セット 90分（新規限定）</option>
-    </select>
-    <label>スタッフ</label>
-    <select id="fStaff"><option>指名なし</option><option>佐伯</option><option>三浦</option><option>小野</option></select>
-    <label>お名前</label><input type="text" id="fName" placeholder="例：山田 太郎">
-    <label>電話番号</label><input type="tel" id="fTel" placeholder="例：090-0000-0000">
-    <button type="submit">この内容で予約リクエスト</button>
-  </form>
-  <div class="book-done" id="bookDone"></div>
-</section>
-
-<footer>ドライヘッドスパ専門店 ねむりどき 大須店（架空）<br>このサイトは業態スキンの販売デモです。実在の店舗ではありません。</footer>
-</div>
-
-<div class="bottom-bar">
-  <a class="b1" href="#slots">空席を確認</a>
-  <a class="b2" href="#book">予約する</a>
-</div>
-
+<footer><div class="fl">ねむりどき</div>ねむりどき 大須店（架空）<br>052-XXX-XXXX（サンプル）<br>OPEN：10:00～23:00<br>このサイトは販売デモです。実在の店舗・人物とは関係ありません。</footer>
+<div class="bar"><a href="tel:0520000000">電話予約</a><a class="line" href="#">LINEで予約（デモ）</a><span class="open">OPEN 10:00～23:00</span></div>
+<script src="staff.js"></script>
 <script>
-(function(){
-  var times=["11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00"];
-  var patterns=[
-    ["ok","ok","few","ok","full","ok","few","ok","ok","few","ok","full"],
-    ["few","ok","ok","full","ok","ok","few","full","ok","ok","few","ok"],
-    ["ok","few","ok","ok","ok","few","ok","ok","full","ok","ok","few"]
-  ];
-  var marks={ok:"○",few:"△",full:"×"};
-  var sel={day:0,time:null};
-  var tabs=document.getElementById('dateTabs'), grid=document.getElementById('slotGrid');
-  var fSlot=document.getElementById('fSlot');
-  function dlabel(off){
-    var d=new Date(); d.setDate(d.getDate()+off);
-    var w=["日","月","火","水","木","金","土"][d.getDay()];
-    var name=off===0?"今日":(off===1?"明日":"明後日");
-    return name+" "+(d.getMonth()+1)+"/"+d.getDate()+"("+w+")";
-  }
-  function renderTabs(){
-    tabs.innerHTML="";
-    for(var i=0;i<3;i++){
-      var b=document.createElement('button'); b.className="date-tab"+(i===sel.day?" on":""); b.textContent=dlabel(i);
-      (function(idx){ b.onclick=function(){ sel.day=idx; sel.time=null; fSlot.value=""; renderTabs(); renderSlots(); }; })(i);
-      tabs.appendChild(b);
-    }
-  }
-  function renderSlots(){
-    grid.innerHTML="";
-    times.forEach(function(t,i){
-      var st=patterns[sel.day][i];
-      var d=document.createElement('div');
-      d.className="slot "+st+(sel.time===t?" sel":"");
-      d.innerHTML=t+'<span class="mark">'+marks[st]+"</span>";
-      if(st!=="full"){ (function(tt){ d.onclick=function(){ sel.time=tt; fSlot.value=dlabel(sel.day)+" "+tt; renderSlots(); document.getElementById('book').scrollIntoView({behavior:'smooth'}); }; })(t); }
-      grid.appendChild(d);
-    });
-  }
-  renderTabs(); renderSlots();
-  document.querySelectorAll('.worry').forEach(function(el){
-    el.addEventListener('click',function(){
-      document.querySelectorAll('.worry').forEach(function(x){x.classList.remove('on')});
-      el.classList.add('on');
-      document.getElementById('fCourse').value=el.getAttribute('data-course');
-      document.getElementById('slots').scrollIntoView({behavior:'smooth'});
-    });
-  });
-  document.getElementById('bookForm').addEventListener('submit',function(e){
-    e.preventDefault();
-    var done=document.getElementById('bookDone');
-    var when=fSlot.value||"日時未選択";
-    var course=document.getElementById('fCourse').value;
-    var staff=document.getElementById('fStaff').value;
-    done.style.display="block";
-    done.innerHTML="<b>予約リクエストを受け付けました（デモ表示）</b><br>"+when+" ／ "+course+" ／ スタッフ："+staff+"<br>実際の店舗ではないため、確認の連絡は届きません。販売デモではこの画面が予約完了の着地になります。";
-    done.scrollIntoView({behavior:'smooth'});
-  });
-})();
+document.getElementById("pickup").innerHTML=[STAFF[0],STAFF[1],STAFF[5]].map(s=>cardHTML(s)).join("");
+document.getElementById("today").innerHTML=STAFF.filter(s=>s.ok).map(s=>cardHTML(s)).join("");
+document.getElementById("therapists").innerHTML=STAFF.slice(0,4).map(s=>cardHTML(s)).join("");
 </script>
-</body>
-</html>
+</body></html>
