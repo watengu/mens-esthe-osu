@@ -8,7 +8,11 @@ const STAFF=[
    "おすすめ"
   ],
   "prof": "店長 ／ 歴8年。ドライヘッド全般と眼精疲労ケア。",
-  "pickup": true
+  "pickup": true,
+  "status": "今すぐご案内",
+  "exp": "8",
+  "role": "店長",
+  "rank": "総合1位"
  },
  {
   "n": "三浦あかり",
@@ -19,7 +23,11 @@ const STAFF=[
    "人気"
   ],
   "prof": "歴5年。アロマヘッドと香りの相談。",
-  "pickup": true
+  "pickup": true,
+  "status": "今すぐご案内",
+  "exp": "5",
+  "role": "",
+  "rank": "総合2位"
  },
  {
   "n": "小野ことり",
@@ -31,7 +39,10 @@ const STAFF=[
    "おすすめ"
   ],
   "prof": "歴3年。フットと快眠セット。",
-  "pickup": false
+  "pickup": false,
+  "status": "今すぐご案内",
+  "exp": "3",
+  "role": ""
  },
  {
   "n": "高田まな",
@@ -42,7 +53,11 @@ const STAFF=[
    "おすすめ"
   ],
   "prof": "歴6年。首・肩の集中ケア。",
-  "pickup": true
+  "pickup": true,
+  "status": "受付終了",
+  "exp": "6",
+  "role": "",
+  "rank": "総合3位"
  },
  {
   "n": "林さくら",
@@ -53,7 +68,11 @@ const STAFF=[
    "新人"
   ],
   "prof": "歴2年。初めての方の案内担当。",
-  "pickup": true
+  "pickup": true,
+  "status": "受付終了",
+  "exp": "2",
+  "role": "",
+  "rank": "総合4位"
  },
  {
   "n": "中村れい",
@@ -64,7 +83,11 @@ const STAFF=[
    "人気"
   ],
   "prof": "歴7年。ロングコースの眠りの深さ。",
-  "pickup": true
+  "pickup": true,
+  "status": "受付終了",
+  "exp": "7",
+  "role": "",
+  "rank": "総合5位"
  },
  {
   "n": "相川みお",
@@ -73,7 +96,10 @@ const STAFF=[
   "today": true,
   "badges": [],
   "prof": "歴2年。ドライヘッド全般。",
-  "pickup": true
+  "pickup": true,
+  "status": "ご案内可能です",
+  "exp": "2",
+  "role": ""
  },
  {
   "n": "石田ゆり",
@@ -84,7 +110,10 @@ const STAFF=[
    "新人"
   ],
   "prof": "歴9年。アロマヘッド。",
-  "pickup": false
+  "pickup": false,
+  "status": "ご案内可能です",
+  "exp": "9",
+  "role": ""
  },
  {
   "n": "井上かな",
@@ -95,7 +124,10 @@ const STAFF=[
    "おすすめ"
   ],
   "prof": "歴8年。眼精疲労ケア。",
-  "pickup": false
+  "pickup": false,
+  "status": "受付終了",
+  "exp": "8",
+  "role": ""
  },
  {
   "n": "宇田あや",
@@ -106,7 +138,10 @@ const STAFF=[
    "人気"
   ],
   "prof": "歴7年。首・肩の集中ケア。",
-  "pickup": false
+  "pickup": false,
+  "status": "受付終了",
+  "exp": "7",
+  "role": ""
  },
  {
   "n": "江口まい",
@@ -118,7 +153,10 @@ const STAFF=[
    "おすすめ"
   ],
   "prof": "歴6年。フットケア。",
-  "pickup": false
+  "pickup": false,
+  "status": "受付終了",
+  "exp": "6",
+  "role": ""
  },
  {
   "n": "太田るな",
@@ -127,7 +165,10 @@ const STAFF=[
   "today": false,
   "badges": [],
   "prof": "歴5年。快眠セット。",
-  "pickup": true
+  "pickup": true,
+  "status": "受付終了",
+  "exp": "5",
+  "role": ""
  },
  {
   "n": "岡田せり",
@@ -138,7 +179,10 @@ const STAFF=[
    "おすすめ"
   ],
   "prof": "歴4年。ロングコース。",
-  "pickup": false
+  "pickup": false,
+  "status": "今すぐご案内",
+  "exp": "4",
+  "role": ""
  },
  {
   "n": "加藤もも",
@@ -147,7 +191,10 @@ const STAFF=[
   "today": false,
   "badges": [],
   "prof": "歴3年。初めての方の案内。",
-  "pickup": false
+  "pickup": false,
+  "status": "受付終了",
+  "exp": "3",
+  "role": ""
  },
  {
   "n": "北川りお",
@@ -158,7 +205,10 @@ const STAFF=[
    "人気"
   ],
   "prof": "歴2年。香りの相談。",
-  "pickup": false
+  "pickup": false,
+  "status": "受付終了",
+  "exp": "2",
+  "role": ""
  },
  {
   "n": "工藤あい",
@@ -169,7 +219,10 @@ const STAFF=[
    "新人"
   ],
   "prof": "歴9年。頭皮ケア。",
-  "pickup": false
+  "pickup": false,
+  "status": "受付終了",
+  "exp": "9",
+  "role": ""
  },
  {
   "n": "近藤すず",
@@ -178,7 +231,10 @@ const STAFF=[
   "today": true,
   "badges": [],
   "prof": "歴8年。ドライヘッド全般。",
-  "pickup": true
+  "pickup": true,
+  "status": "ご予約完売",
+  "exp": "8",
+  "role": ""
  },
  {
   "n": "坂本はな",
@@ -189,7 +245,10 @@ const STAFF=[
    "新人"
   ],
   "prof": "歴7年。アロマヘッド。",
-  "pickup": false
+  "pickup": false,
+  "status": "受付終了",
+  "exp": "7",
+  "role": ""
  },
  {
   "n": "島田ゆめ",
@@ -200,7 +259,10 @@ const STAFF=[
    "おすすめ"
   ],
   "prof": "歴6年。眼精疲労ケア。",
-  "pickup": false
+  "pickup": false,
+  "status": "今すぐご案内",
+  "exp": "6",
+  "role": ""
  },
  {
   "n": "杉本あき",
@@ -211,7 +273,10 @@ const STAFF=[
    "人気"
   ],
   "prof": "歴5年。首・肩の集中ケア。",
-  "pickup": false
+  "pickup": false,
+  "status": "受付終了",
+  "exp": "5",
+  "role": ""
  },
  {
   "n": "瀬戸なな",
@@ -223,7 +288,10 @@ const STAFF=[
    "おすすめ"
   ],
   "prof": "歴4年。フットケア。",
-  "pickup": false
+  "pickup": false,
+  "status": "受付終了",
+  "exp": "4",
+  "role": ""
  },
  {
   "n": "高橋こと",
@@ -232,7 +300,10 @@ const STAFF=[
   "today": true,
   "badges": [],
   "prof": "歴3年。快眠セット。",
-  "pickup": true
+  "pickup": true,
+  "status": "今すぐご案内",
+  "exp": "3",
+  "role": ""
  },
  {
   "n": "田村みく",
@@ -243,7 +314,10 @@ const STAFF=[
    "おすすめ"
   ],
   "prof": "歴2年。ロングコース。",
-  "pickup": false
+  "pickup": false,
+  "status": "受付終了",
+  "exp": "2",
+  "role": ""
  },
  {
   "n": "千葉れな",
@@ -252,7 +326,10 @@ const STAFF=[
   "today": true,
   "badges": [],
   "prof": "歴9年。初めての方の案内。",
-  "pickup": false
+  "pickup": false,
+  "status": "今すぐご案内",
+  "exp": "9",
+  "role": ""
  },
  {
   "n": "辻そら",
@@ -263,7 +340,10 @@ const STAFF=[
    "人気"
   ],
   "prof": "歴8年。香りの相談。",
-  "pickup": false
+  "pickup": false,
+  "status": "受付終了",
+  "exp": "8",
+  "role": ""
  },
  {
   "n": "寺田ひな",
@@ -274,7 +354,10 @@ const STAFF=[
    "新人"
   ],
   "prof": "歴7年。頭皮ケア。",
-  "pickup": false
+  "pickup": false,
+  "status": "今すぐご案内",
+  "exp": "7",
+  "role": ""
  },
  {
   "n": "中島ゆう",
@@ -283,7 +366,10 @@ const STAFF=[
   "today": false,
   "badges": [],
   "prof": "歴6年。ドライヘッド全般。",
-  "pickup": false
+  "pickup": false,
+  "status": "受付終了",
+  "exp": "6",
+  "role": ""
  },
  {
   "n": "永井かりん",
@@ -294,7 +380,10 @@ const STAFF=[
    "新人"
   ],
   "prof": "歴5年。アロマヘッド。",
-  "pickup": true
+  "pickup": true,
+  "status": "今すぐご案内",
+  "exp": "5",
+  "role": ""
  },
  {
   "n": "西村とわ",
@@ -305,7 +394,10 @@ const STAFF=[
    "おすすめ"
   ],
   "prof": "歴4年。眼精疲労ケア。",
-  "pickup": false
+  "pickup": false,
+  "status": "受付終了",
+  "exp": "4",
+  "role": ""
  },
  {
   "n": "野口ましろ",
@@ -316,13 +408,27 @@ const STAFF=[
    "人気"
   ],
   "prof": "歴3年。首・肩の集中ケア。",
-  "pickup": true
+  "pickup": true,
+  "status": "受付終了",
+  "exp": "3",
+  "role": ""
  }
 ];
-STAFF.forEach((s,i)=>{ s.id=i; s.tm = s.today ? s.base : "-----"; s.ok = s.today; });
-function badgesHTML(s){return s.badges.length?`<span class="bdg">${s.badges.map(b=>`<i>${b}</i>`).join("")}</span>`:""}
-function cardHTML(s,withProf){
- return `<a class="card" href="profile.html?id=${s.id}"><span class="ph"><img src="${s.img}" alt="">${badgesHTML(s)}</span><span class="nm">${s.n}</span><span class="tm">🕐 ${s.tm}</span><span class="rm">${s.ok?"大須":""}</span>${s.ok?'<span class="st">ご予約可能</span>':""}${withProf?`<span class="pf">${s.prof}</span>`:""}</a>`;
+
+STAFF.forEach((s,i)=>{ s.id=i; });
+function isNew(s){ return s.badges.includes("新人"); }
+function panelHTML(s){
+ const newTag = isNew(s) ? '<span class="newrib"><span>NEW</span></span>' : '';
+ const rank = s.rank ? `<span class="rankv">${s.rank}</span>` : '';
+ return `<div class="panel">
+  <div class="status">${s.status}</div>
+  <a class="ph" href="profile.html?id=${s.id}"><img src="${s.img}" alt="">${newTag}${rank}<span class="sns"><i class="s02">02</i><i class="sx">X</i></span></a>
+  <div class="timebar">🕐 ${s.today ? s.base.replace("～"," ~ ") : "-----"}</div>
+  <div class="pname"><a href="profile.html?id=${s.id}">${s.n}</a></div>
+  <div class="pspec">${s.exp ? "歴"+s.exp+"年" : ""}${s.role ? " ／ "+s.role : ""}</div>
+  <a class="linebtn" href="#">${s.n}ちゃんにLINE</a>
+ </div>`;
 }
-function splashDone(){const sp=document.getElementById("splash");if(sp){setTimeout(()=>{sp.style.opacity="0";setTimeout(()=>sp.remove(),650)},500)}}
-window.addEventListener("load",splashDone);
+function headHTML(active){
+ return "";
+}

@@ -1,29 +1,31 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>セラピスト一覧｜大須のメンズエステ【ねむりどき 大須店】（デモ）</title><link rel="stylesheet" href="style.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet"></head><body>
-<div class="demo">サンプル／デモサイトです（架空の店舗・人物・出勤はサンプル表示）</div><div id="splash"><div class="lg">ねむりどき<small>NEMURIDOKI OSU</small></div></div><header class="top"><div class="logo"><span class="g">ね</span>むりどき<small>NEMURIDOKI OSU</small></div></header>
-<nav class="main"><a href="index.html">トップ</a><a href="schedule.html">出勤情報</a><a href="system.html">料金システム</a><a href="therapist.html" class="on">セラピスト</a><a href="access.html">アクセス</a><a href="topics.html">トピックス</a><a href="faq.html">FAQ</a></nav>
-<div class="banner"><img src="img/treatment.jpg"><div class="veil"></div><div class="lg">ねむりどき</div></div>
-<section><h2 class="sec"><span class="en">Therapist</span><span class="ja">セラピスト一覧</span></h2>
-<div class="filter">
-<div>絞り込み：<label><input type="checkbox" id="f-new"> 新人</label><label><input type="checkbox" id="f-rec"> おすすめ</label><label><input type="checkbox" id="f-pop"> 人気</label></div>
-<div class="row"><button id="f-go">検索</button><button class="reset" id="f-reset">リセット</button></div>
-</div>
-<div class="grid" id="all"></div>
-<p class="note">得意分野は施術軸で記載しています（デモ）。</p>
-</section>
-<footer><div class="fl">ねむりどき</div>ねむりどき 大須店（架空）<br>052-XXX-XXXX（サンプル）<br>OPEN：10:00～23:00<br>このサイトは販売デモです。実在の店舗・人物とは関係ありません。</footer>
-<div class="bar"><a href="tel:0520000000">電話予約</a><a class="line" href="#">LINEで予約（デモ）</a><span class="open">OPEN 10:00～23:00</span></div>
-<script src="staff.js"></script>
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>セラピスト一覧｜大須のメンズエステ【ねむりどき 大須店】（デモ）</title><link rel="stylesheet" href="style.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet"></head><body><script src="staff.js"></script>
+<div class="demo">サンプル／デモサイトです（架空の店舗・人物・条件はサンプル表示）</div>
+<div class="topstrip">大須メンズエステ ねむりどき 大須店｜完全個室・ドライヘッドスパ【名古屋・大須】</div>
+<header class="top"><div class="logo"><div class="l1">Nagoya Osu</div><div class="l2">Nemuridoki</div></div><button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button></header>
+<nav id="menu"><a href="index.html">Top<small>トップ</small></a><a href="system.html">System & Access<small>料金＆アクセス</small></a><a href="index.html#today">Today's<small>本日出勤</small></a><a href="therapist.html">Therapist<small>セラピスト一覧</small></a><a href="schedule.html">Schedule<small>週間出勤予定</small></a><a href="diary.html">Photo Diary<small>写メ日記</small></a><a href="system.html#access">Access<small>アクセス</small></a><a href="recruit.html">Recruit<small>求人情報</small></a></nav>
+
+<h2 class="sec"><span class="en">Therapist</span><span class="ja">セラピスト一覧</span></h2>
+<div class="grid2" id="allGrid"></div>
 <script>
-const all=document.getElementById("all");
-function draw(list){all.innerHTML=list.map(s=>cardHTML(s,true)).join("")}
-draw(STAFF);
-document.getElementById("f-go").onclick=()=>{
- const want=[];
- if(document.getElementById("f-new").checked)want.push("新人");
- if(document.getElementById("f-rec").checked)want.push("おすすめ");
- if(document.getElementById("f-pop").checked)want.push("人気");
- draw(want.length?STAFF.filter(s=>want.some(w=>s.badges.includes(w))):STAFF);
-};
-document.getElementById("f-reset").onclick=()=>{["f-new","f-rec","f-pop"].forEach(id=>document.getElementById(id).checked=false);draw(STAFF)};
+document.getElementById("allGrid").innerHTML = STAFF.map(panelHTML).join("");
 </script>
+<h2 class="sec"><span class="en">Link</span><span class="ja">店舗情報</span></h2>
+<dl class="shopinfo">
+<dt>Business</dt><dd>ねむりどき 大須店（架空）</dd>
+<dt>Price Range</dt><dd>￥6,900 - ￥16,900</dd>
+<dt>Description</dt><dd>名古屋・大須エリアの完全個室ドライヘッドスパ。水もオイルも使わないドライヘッドを中心に、静かな個室で深い眠りをお渡しします。</dd>
+<dt>営業時間</dt><dd>10:00 ～ 23:00</dd>
+<dt>住所</dt><dd>名古屋市中区大須（番地はサンプル表記）／大須観音駅 徒歩3分・上前津駅 徒歩5分</dd>
+<dt>Tel</dt><dd>052-XXX-XXXX（サンプル）</dd>
+</dl>
+<p class="healthy">ねむりどき 大須店はリラクゼーションを目的とした健全なサロンです。施術は性的サービスを目的としたものではございません。公序良俗に反する行為は一切お断りしております。このサイトは販売デモです。</p>
+<footer>(C) Nemuridoki Osu since 2026 - sample demo</footer>
+<div class="bar5">
+<a href="tel:0520000000"><span class="ic">☎</span><span class="lb">Tel</span></a>
+<a href="#"><span class="ic">📋</span><span class="lb">Reserve</span></a>
+<a href="system.html"><span class="ic">💳</span><span class="lb">Card</span></a>
+<a href="system.html"><span class="ic">¥</span><span class="lb">System</span></a>
+<a href="recruit.html"><span class="ic">🏷</span><span class="lb">Recruit</span></a>
+</div>
+
 </body></html>
